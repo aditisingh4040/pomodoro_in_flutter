@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:pomodoro_in_flutter/quizler_main.dart';
+import 'package:pomodoro_in_flutter/aditi_quizler_main.dart';
+import 'package:pomodoro_in_flutter/coin_data.dart';
+import 'package:pomodoro_in_flutter/price_screen.dart';
 import 'package:pomodoro_in_flutter/screens/calculator_screen.dart';
 import 'package:pomodoro_in_flutter/timer_page.dart';
+import 'package:pomodoro_in_flutter/aditi _flash _screen.dart';
+import 'package:pomodoro_in_flutter/aditi_bitcoin_main.dart';
+import 'package:pomodoro_in_flutter/aditi_bmi_main.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -33,6 +39,22 @@ class _HomePageState extends State<HomePage> {
                       MaterialPageRoute(builder: (context) => QuizPage()));
                 },
                 child: Text("Quiz Page")),
+
+
+      ElevatedButton(
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => FlashChat()));
+        },
+          child: Text("Flash Chat")),
+
+
+        ElevatedButton(
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => PriceScreen()));
+          },
+            child: Text("Price Screen")),
 
           ],
         ),
